@@ -10,11 +10,8 @@ char Operator;
 float Calculator()
 {
     // Prints instructions and takes inputs.
-    cout << "\n";
     cin >> Input1;
-    //cout << "Enter the operator you wish to use. E.g. +, x, - \n";
     cin >> Operator;
-    //cout << "Enter a number. \n";
     cin >> Input2;
 
     // Checks which operator to use.
@@ -30,7 +27,7 @@ float Calculator()
     {
         return (Input1 / Input2);
     }
-    if (Operator == '*')
+    if (Operator == 'x' || Operator == 'X') // "||" means or.
     {
         return (Input1 * Input2);
     }
@@ -40,8 +37,11 @@ float Calculator()
 int main()
 {
     float Result;
-    Result = Calculator();
-    cout << "The answer is: " << Result;
-
+    while (true)
+    {
+        Result = Calculator();
+        cout << "The answer is: " << Result << endl << endl; 
+    }
+    
     return 0;
 }
