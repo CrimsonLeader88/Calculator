@@ -1,11 +1,7 @@
 #include <iostream>
+#include "Calculator.h"
 
 using namespace std; // Prevents me from having to write "std::" before everything.
-
-// Variables
-float Input1;
-float Input2;
-char Operator;
 
 float Calculator()
 {
